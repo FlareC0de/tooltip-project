@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #dadada;
+}
+
+.container{
+    display: flex;
+    column-gap: 300px;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+a{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+a i{
+    font-size: 2rem;
+    color: #333;
+}
+.one a i{
+    color: #fff;
+}
+.tooltip .tooltiptext{
+    width: 300px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+    top: -200px;
+    left: 55px;
+    margin-left: -60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+.tooltip.one .tooltiptext{
+    background-color: #333;
+    color: #fff;
+}
+.tooltip .tooltiptext::before{
+    content: '';
+    position: absolute;
+    left: 25px;
+    bottom: -7px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.tooltip.one .tooltiptext::before{
+    background-color: #333;
+}
+.tooltip:hover .tooltiptext{
+    opacity: 1;
+    visibility: visible;
+}
+.tooltiptext p{
+    font-size: .7rem;
+}
+.one a{
+    background-color: #333;
+}
